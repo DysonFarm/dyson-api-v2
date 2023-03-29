@@ -120,6 +120,10 @@ const hopArbClient = client('https://api.thegraph.com/subgraphs/name/hop-protoco
 const hopOpClient = client('https://api.thegraph.com/subgraphs/name/hop-protocol/hop-optimism');
 const hopPolyClient = client('https://api.thegraph.com/subgraphs/name/hop-protocol/hop-polygon');
 
+const zyberArbitrumClient = client(
+  'https://api.thegraph.com/subgraphs/name/iliaazhel/zyberswap-info'
+)
+
 const isSushiClient = (client: ApolloClient<NormalizedCacheObject>) => {
   return (
     client === sushiMainnetClient ||

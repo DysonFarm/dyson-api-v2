@@ -1,0 +1,60 @@
+[
+  {
+    "name": "zyber-weth-usdc",
+    "address": "0x308c5b91f63307439fdb51a9fa4dfc979e2ed6b0",
+    "poolId": "0xd7139ea000aa81ad13d55b4aa91f835052bcef2b6f5b60c17faaf9e66fa89bb6",
+    "decimals": "1e18",
+    "chainId": 42161,
+    "lp0": {
+      "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+      "oracle": "tokens",
+      "oracleId": "USDC",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "oracle": "tokens",
+      "oracleId": "WETH",
+      "decimals": "1e18"
+    }
+  },
+
+  {
+    "name": "zyber-wbtc-usdc",
+    "address": "0x8db6cf8e8ec31fcddb9c36e2becb20019b85ce37",
+    "poolId": "0x00ec4a4249d1a7001ca329067f43e6bffbdcb0f89addf089145937a297eec380",
+    "decimals": "1e18",
+    "chainId": 42161,
+    "lp0": {
+      "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+      "oracle": "tokens",
+      "oracleId": "WBTC",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+      "oracle": "tokens",
+      "oracleId": "USDC",
+      "decimals": "1e18"
+    }
+  },
+  {
+    "name": "zyber-usdt-usdc",
+    "address": "0x941f4ac07d2526258fc9a07a6c9a23715968b419",
+    "poolId": "0x50f228fde52fa64396856b702989347f2a2ea66218ddf5332a029f9102d8fc7f",
+    "decimals": "1e18",
+    "chainId": 42161,
+    "lp0": {
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "oracle": "tokens",
+      "oracleId": "USDT",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+      "oracle": "tokens",
+      "oracleId": "USDC",
+      "decimals": "1e18"
+    }
+  }
+]

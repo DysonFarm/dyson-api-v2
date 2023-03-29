@@ -20,7 +20,7 @@ const { getCantoApys } = require('./canto');
 const { getEthereumApys } = require('./ethereum');
 const { getKey, setKey } = require('../../utils/cache');
 const { fetchBoostAprs } = require('./getBoostAprs');
-
+const { getZyberArbitrumApys } = require('./arbitrum/getZyberArbitrumAPYs');
 const INIT_DELAY = process.env.INIT_DELAY || 60 * 1000;
 const BOOST_APR_INIT_DELAY = 30 * 1000;
 var REFRESH_INTERVAL = 15 * 60 * 1000;
@@ -29,6 +29,7 @@ const BOOST_REFRESH_INTERVAL = 2 * 60 * 1000;
 let apys = {};
 let apyBreakdowns = {};
 let boostAprs = {};
+let zyberApys = {}; // NOTE: for Testing
 
 const getApys = () => {
   return {
@@ -37,11 +38,19 @@ const getApys = () => {
   };
 };
 
+getZyberApys = () => {
+  return {
+    zyberApys,
+  };
+};
+
 const getBoostAprs = () => boostAprs;
 
 const updateApys = async () => {
   console.log('> updating apys');
   const start = Date.now();
+  zyberApys = await getZyberArbitrumApys();
+  console.log(zyberApys);
   try {
     const results = await Promise.allSettled([
       getMaticApys(),
@@ -150,4 +159,4 @@ const saveBoostsToRedis = async () => {
   await setKey('BOOST_APRS', boostAprs);
 };
 
-module.exports = { getApys, getBoostAprs, initApyService };
+module.exports = { getApys, getBoostAprs, initApyService, getZyberApys };

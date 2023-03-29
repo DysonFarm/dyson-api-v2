@@ -20,9 +20,10 @@ const { getTreasury } = require('./api/treasury');
 const { vaultZapSupport, vaultZapSupportDebug } = require('./api/zaps');
 
 router.get('/apy', stats.apy);
+router.get('/apy/zyber', stats.zyber);
 router.get('/apy/breakdown', stats.apyBreakdowns);
 router.get('/apy/boosts', stats.boostApr);
-
+router.get('/apy/zyber', stats.zyber);
 router.get('/bifibuyback', bifibuyback);
 
 router.get('/tvl', tvl.vaultTvl);
